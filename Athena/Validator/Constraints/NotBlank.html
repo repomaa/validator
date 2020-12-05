@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.34.0">
+<meta name="crystal_docs.project_version" content="master">
+<meta name="crystal_docs.project_name" content="athena-validator">
+
+
+<link href="../../../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../../js/doc.js"></script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+
+  <meta id="repository-name" content="athena-validator">
+  <title>Athena::Validator::Constraints::NotBlank - athena-validator master</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../../../";
+  </script>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../../../index.html">
+          athena-validator
+        </a>
+      </h1>
+
+      <span class="project-version">
+        master
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class=" " data-id="athena-validator/ASPEC" data-name="aspec">
+      <a href="../../../ASPEC.html">ASPEC</a>
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Assert" data-name="assert">
+      <a href="../../../Assert.html">Assert</a>
+      
+    </li>
+  
+  <li class="parent open current" data-id="athena-validator/Athena" data-name="athena">
+      <a href="../../../Athena.html">Athena</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="athena-validator/Athena/Spec" data-name="athena::spec">
+      <a href="../../../Athena/Spec.html">Spec</a>
+      
+        <ul>
+  
+  <li class=" " data-id="athena-validator/Athena/Spec/Methods" data-name="athena::spec::methods">
+      <a href="../../../Athena/Spec/Methods.html">Methods</a>
+      
+    </li>
+  
+  <li class="parent " data-id="athena-validator/Athena/Spec/TestCase" data-name="athena::spec::testcase">
+      <a href="../../../Athena/Spec/TestCase.html">TestCase</a>
+      
+        <ul>
+  
+  <li class=" " data-id="athena-validator/Athena/Spec/TestCase/DataProvider" data-name="athena::spec::testcase::dataprovider">
+      <a href="../../../Athena/Spec/TestCase/DataProvider.html">DataProvider</a>
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Spec/TestCase/Focus" data-name="athena::spec::testcase::focus">
+      <a href="../../../Athena/Spec/TestCase/Focus.html">Focus</a>
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Spec/TestCase/Pending" data-name="athena::spec::testcase::pending">
+      <a href="../../../Athena/Spec/TestCase/Pending.html">Pending</a>
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Spec/TestCase/Tags" data-name="athena::spec::testcase::tags">
+      <a href="../../../Athena/Spec/TestCase/Tags.html">Tags</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent open current" data-id="athena-validator/Athena/Validator" data-name="athena::validator">
+      <a href="../../../Athena/Validator.html">Validator</a>
+      
+        <ul>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Constraint" data-name="athena::validator::constraint">
+      <a href="../../../Athena/Validator/Constraint.html">Constraint</a>
+      
+    </li>
+  
+  <li class="parent open current" data-id="athena-validator/Athena/Validator/Constraints" data-name="athena::validator::constraints">
+      <a href="../../../Athena/Validator/Constraints.html">Constraints</a>
+      
+        <ul>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Constraints/AbstractComparison" data-name="athena::validator::constraints::abstractcomparison(valuetype)">
+      <a href="../../../Athena/Validator/Constraints/AbstractComparison.html">AbstractComparison</a>
+      
+    </li>
+  
+  <li class="parent " data-id="athena-validator/Athena/Validator/Constraints/All" data-name="athena::validator::constraints::all">
+      <a href="../../../Athena/Validator/Constraints/All.html">All</a>
+      
+        <ul>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Constraints/All/Validator" data-name="athena::validator::constraints::all::validator">
+      <a href="../../../Athena/Validator/Constraints/All/Validator.html">Validator</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="athena-validator/Athena/Validator/Constraints/AtLeastOneOf" data-name="athena::validator::constraints::atleastoneof">
+      <a href="../../../Athena/Validator/Constraints/AtLeastOneOf.html">AtLeastOneOf</a>
+      
+        <ul>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Constraints/AtLeastOneOf/Validator" data-name="athena::validator::constraints::atleastoneof::validator">
+      <a href="../../../Athena/Validator/Constraints/AtLeastOneOf/Validator.html">Validator</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="athena-validator/Athena/Validator/Constraints/Blank" data-name="athena::validator::constraints::blank">
+      <a href="../../../Athena/Validator/Constraints/Blank.html">Blank</a>
+      
+        <ul>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Constraints/Blank/Validator" data-name="athena::validator::constraints::blank::validator">
+      <a href="../../../Athena/Validator/Constraints/Blank/Validator.html">Validator</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="athena-validator/Athena/Validator/Constraints/Callback" data-name="athena::validator::constraints::callback">
+      <a href="../../../Athena/Validator/Constraints/Callback.html">Callback</a>
+      
+        <ul>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Constraints/Callback/CallbackProc" data-name="athena::validator::constraints::callback::callbackproc">
+      <a href="../../../Athena/Validator/Constraints/Callback/CallbackProc.html">CallbackProc</a>
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Constraints/Callback/Validator" data-name="athena::validator::constraints::callback::validator">
+      <a href="../../../Athena/Validator/Constraints/Callback/Validator.html">Validator</a>
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Constraints/Callback/Value" data-name="athena::validator::constraints::callback::value(t)">
+      <a href="../../../Athena/Validator/Constraints/Callback/Value.html">Value</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="athena-validator/Athena/Validator/Constraints/Choice" data-name="athena::validator::constraints::choice">
+      <a href="../../../Athena/Validator/Constraints/Choice.html">Choice</a>
+      
+        <ul>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Constraints/Choice/Validator" data-name="athena::validator::constraints::choice::validator">
+      <a href="../../../Athena/Validator/Constraints/Choice/Validator.html">Validator</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Constraints/ComparisonValidator" data-name="athena::validator::constraints::comparisonvalidator">
+      <a href="../../../Athena/Validator/Constraints/ComparisonValidator.html">ComparisonValidator</a>
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Constraints/Composite" data-name="athena::validator::constraints::composite">
+      <a href="../../../Athena/Validator/Constraints/Composite.html">Composite</a>
+      
+    </li>
+  
+  <li class="parent " data-id="athena-validator/Athena/Validator/Constraints/Compound" data-name="athena::validator::constraints::compound">
+      <a href="../../../Athena/Validator/Constraints/Compound.html">Compound</a>
+      
+        <ul>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Constraints/Compound/Validator" data-name="athena::validator::constraints::compound::validator">
+      <a href="../../../Athena/Validator/Constraints/Compound/Validator.html">Validator</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="athena-validator/Athena/Validator/Constraints/Email" data-name="athena::validator::constraints::email">
+      <a href="../../../Athena/Validator/Constraints/Email.html">Email</a>
+      
+        <ul>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Constraints/Email/Mode" data-name="athena::validator::constraints::email::mode">
+      <a href="../../../Athena/Validator/Constraints/Email/Mode.html">Mode</a>
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Constraints/Email/Validator" data-name="athena::validator::constraints::email::validator">
+      <a href="../../../Athena/Validator/Constraints/Email/Validator.html">Validator</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="athena-validator/Athena/Validator/Constraints/EqualTo" data-name="athena::validator::constraints::equalto(valuetype)">
+      <a href="../../../Athena/Validator/Constraints/EqualTo.html">EqualTo</a>
+      
+        <ul>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Constraints/EqualTo/Validator" data-name="athena::validator::constraints::equalto::validator">
+      <a href="../../../Athena/Validator/Constraints/EqualTo/Validator.html">Validator</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="athena-validator/Athena/Validator/Constraints/GreaterThan" data-name="athena::validator::constraints::greaterthan(valuetype)">
+      <a href="../../../Athena/Validator/Constraints/GreaterThan.html">GreaterThan</a>
+      
+        <ul>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Constraints/GreaterThan/Validator" data-name="athena::validator::constraints::greaterthan::validator">
+      <a href="../../../Athena/Validator/Constraints/GreaterThan/Validator.html">Validator</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="athena-validator/Athena/Validator/Constraints/GreaterThanOrEqual" data-name="athena::validator::constraints::greaterthanorequal(valuetype)">
+      <a href="../../../Athena/Validator/Constraints/GreaterThanOrEqual.html">GreaterThanOrEqual</a>
+      
+        <ul>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Constraints/GreaterThanOrEqual/Validator" data-name="athena::validator::constraints::greaterthanorequal::validator">
+      <a href="../../../Athena/Validator/Constraints/GreaterThanOrEqual/Validator.html">Validator</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="athena-validator/Athena/Validator/Constraints/GroupSequence" data-name="athena::validator::constraints::groupsequence">
+      <a href="../../../Athena/Validator/Constraints/GroupSequence.html">GroupSequence</a>
+      
+        <ul>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Constraints/GroupSequence/Provider" data-name="athena::validator::constraints::groupsequence::provider">
+      <a href="../../../Athena/Validator/Constraints/GroupSequence/Provider.html">Provider</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="athena-validator/Athena/Validator/Constraints/IP" data-name="athena::validator::constraints::ip">
+      <a href="../../../Athena/Validator/Constraints/IP.html">IP</a>
+      
+        <ul>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Constraints/IP/Validator" data-name="athena::validator::constraints::ip::validator">
+      <a href="../../../Athena/Validator/Constraints/IP/Validator.html">Validator</a>
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Constraints/IP/Version" data-name="athena::validator::constraints::ip::version">
+      <a href="../../../Athena/Validator/Constraints/IP/Version.html">Version</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="athena-validator/Athena/Validator/Constraints/ISBN" data-name="athena::validator::constraints::isbn">
+      <a href="../../../Athena/Validator/Constraints/ISBN.html">ISBN</a>
+      
+        <ul>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Constraints/ISBN/Type" data-name="athena::validator::constraints::isbn::type">
+      <a href="../../../Athena/Validator/Constraints/ISBN/Type.html">Type</a>
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Constraints/ISBN/Validator" data-name="athena::validator::constraints::isbn::validator">
+      <a href="../../../Athena/Validator/Constraints/ISBN/Validator.html">Validator</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="athena-validator/Athena/Validator/Constraints/IsFalse" data-name="athena::validator::constraints::isfalse">
+      <a href="../../../Athena/Validator/Constraints/IsFalse.html">IsFalse</a>
+      
+        <ul>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Constraints/IsFalse/Validator" data-name="athena::validator::constraints::isfalse::validator">
+      <a href="../../../Athena/Validator/Constraints/IsFalse/Validator.html">Validator</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="athena-validator/Athena/Validator/Constraints/ISIN" data-name="athena::validator::constraints::isin">
+      <a href="../../../Athena/Validator/Constraints/ISIN.html">ISIN</a>
+      
+        <ul>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Constraints/ISIN/Validator" data-name="athena::validator::constraints::isin::validator">
+      <a href="../../../Athena/Validator/Constraints/ISIN/Validator.html">Validator</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="athena-validator/Athena/Validator/Constraints/IsNil" data-name="athena::validator::constraints::isnil">
+      <a href="../../../Athena/Validator/Constraints/IsNil.html">IsNil</a>
+      
+        <ul>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Constraints/IsNil/Validator" data-name="athena::validator::constraints::isnil::validator">
+      <a href="../../../Athena/Validator/Constraints/IsNil/Validator.html">Validator</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="athena-validator/Athena/Validator/Constraints/ISSN" data-name="athena::validator::constraints::issn">
+      <a href="../../../Athena/Validator/Constraints/ISSN.html">ISSN</a>
+      
+        <ul>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Constraints/ISSN/Validator" data-name="athena::validator::constraints::issn::validator">
+      <a href="../../../Athena/Validator/Constraints/ISSN/Validator.html">Validator</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="athena-validator/Athena/Validator/Constraints/IsTrue" data-name="athena::validator::constraints::istrue">
+      <a href="../../../Athena/Validator/Constraints/IsTrue.html">IsTrue</a>
+      
+        <ul>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Constraints/IsTrue/Validator" data-name="athena::validator::constraints::istrue::validator">
+      <a href="../../../Athena/Validator/Constraints/IsTrue/Validator.html">Validator</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="athena-validator/Athena/Validator/Constraints/LessThan" data-name="athena::validator::constraints::lessthan(valuetype)">
+      <a href="../../../Athena/Validator/Constraints/LessThan.html">LessThan</a>
+      
+        <ul>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Constraints/LessThan/Validator" data-name="athena::validator::constraints::lessthan::validator">
+      <a href="../../../Athena/Validator/Constraints/LessThan/Validator.html">Validator</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="athena-validator/Athena/Validator/Constraints/LessThanOrEqual" data-name="athena::validator::constraints::lessthanorequal(valuetype)">
+      <a href="../../../Athena/Validator/Constraints/LessThanOrEqual.html">LessThanOrEqual</a>
+      
+        <ul>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Constraints/LessThanOrEqual/Validator" data-name="athena::validator::constraints::lessthanorequal::validator">
+      <a href="../../../Athena/Validator/Constraints/LessThanOrEqual/Validator.html">Validator</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="athena-validator/Athena/Validator/Constraints/Luhn" data-name="athena::validator::constraints::luhn">
+      <a href="../../../Athena/Validator/Constraints/Luhn.html">Luhn</a>
+      
+        <ul>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Constraints/Luhn/Validator" data-name="athena::validator::constraints::luhn::validator">
+      <a href="../../../Athena/Validator/Constraints/Luhn/Validator.html">Validator</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Constraints/Negative" data-name="athena::validator::constraints::negative">
+      <a href="../../../Athena/Validator/Constraints/Negative.html">Negative</a>
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Constraints/NegativeOrZero" data-name="athena::validator::constraints::negativeorzero">
+      <a href="../../../Athena/Validator/Constraints/NegativeOrZero.html">NegativeOrZero</a>
+      
+    </li>
+  
+  <li class="parent open current" data-id="athena-validator/Athena/Validator/Constraints/NotBlank" data-name="athena::validator::constraints::notblank">
+      <a href="../../../Athena/Validator/Constraints/NotBlank.html">NotBlank</a>
+      
+        <ul>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Constraints/NotBlank/Validator" data-name="athena::validator::constraints::notblank::validator">
+      <a href="../../../Athena/Validator/Constraints/NotBlank/Validator.html">Validator</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="athena-validator/Athena/Validator/Constraints/NotEqualTo" data-name="athena::validator::constraints::notequalto(valuetype)">
+      <a href="../../../Athena/Validator/Constraints/NotEqualTo.html">NotEqualTo</a>
+      
+        <ul>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Constraints/NotEqualTo/Validator" data-name="athena::validator::constraints::notequalto::validator">
+      <a href="../../../Athena/Validator/Constraints/NotEqualTo/Validator.html">Validator</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="athena-validator/Athena/Validator/Constraints/NotNil" data-name="athena::validator::constraints::notnil">
+      <a href="../../../Athena/Validator/Constraints/NotNil.html">NotNil</a>
+      
+        <ul>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Constraints/NotNil/Validator" data-name="athena::validator::constraints::notnil::validator">
+      <a href="../../../Athena/Validator/Constraints/NotNil/Validator.html">Validator</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Constraints/Positive" data-name="athena::validator::constraints::positive">
+      <a href="../../../Athena/Validator/Constraints/Positive.html">Positive</a>
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Constraints/PositiveOrZero" data-name="athena::validator::constraints::positiveorzero">
+      <a href="../../../Athena/Validator/Constraints/PositiveOrZero.html">PositiveOrZero</a>
+      
+    </li>
+  
+  <li class="parent " data-id="athena-validator/Athena/Validator/Constraints/Range" data-name="athena::validator::constraints::range">
+      <a href="../../../Athena/Validator/Constraints/Range.html">Range</a>
+      
+        <ul>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Constraints/Range/Validator" data-name="athena::validator::constraints::range::validator">
+      <a href="../../../Athena/Validator/Constraints/Range/Validator.html">Validator</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="athena-validator/Athena/Validator/Constraints/Regex" data-name="athena::validator::constraints::regex">
+      <a href="../../../Athena/Validator/Constraints/Regex.html">Regex</a>
+      
+        <ul>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Constraints/Regex/Validator" data-name="athena::validator::constraints::regex::validator">
+      <a href="../../../Athena/Validator/Constraints/Regex/Validator.html">Validator</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="athena-validator/Athena/Validator/Constraints/Sequentially" data-name="athena::validator::constraints::sequentially">
+      <a href="../../../Athena/Validator/Constraints/Sequentially.html">Sequentially</a>
+      
+        <ul>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Constraints/Sequentially/Validator" data-name="athena::validator::constraints::sequentially::validator">
+      <a href="../../../Athena/Validator/Constraints/Sequentially/Validator.html">Validator</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="athena-validator/Athena/Validator/Constraints/Size" data-name="athena::validator::constraints::size">
+      <a href="../../../Athena/Validator/Constraints/Size.html">Size</a>
+      
+        <ul>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Constraints/Size/Validator" data-name="athena::validator::constraints::size::validator">
+      <a href="../../../Athena/Validator/Constraints/Size/Validator.html">Validator</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="athena-validator/Athena/Validator/Constraints/Unique" data-name="athena::validator::constraints::unique">
+      <a href="../../../Athena/Validator/Constraints/Unique.html">Unique</a>
+      
+        <ul>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Constraints/Unique/Validator" data-name="athena::validator::constraints::unique::validator">
+      <a href="../../../Athena/Validator/Constraints/Unique/Validator.html">Validator</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="athena-validator/Athena/Validator/Constraints/URL" data-name="athena::validator::constraints::url">
+      <a href="../../../Athena/Validator/Constraints/URL.html">URL</a>
+      
+        <ul>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Constraints/URL/Validator" data-name="athena::validator::constraints::url::validator">
+      <a href="../../../Athena/Validator/Constraints/URL/Validator.html">Validator</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="athena-validator/Athena/Validator/Constraints/Valid" data-name="athena::validator::constraints::valid">
+      <a href="../../../Athena/Validator/Constraints/Valid.html">Valid</a>
+      
+        <ul>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Constraints/Valid/Validator" data-name="athena::validator::constraints::valid::validator">
+      <a href="../../../Athena/Validator/Constraints/Valid/Validator.html">Validator</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/ConstraintValidator" data-name="athena::validator::constraintvalidator">
+      <a href="../../../Athena/Validator/ConstraintValidator.html">ConstraintValidator</a>
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/ConstraintValidatorFactory" data-name="athena::validator::constraintvalidatorfactory">
+      <a href="../../../Athena/Validator/ConstraintValidatorFactory.html">ConstraintValidatorFactory</a>
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/ConstraintValidatorFactoryInterface" data-name="athena::validator::constraintvalidatorfactoryinterface">
+      <a href="../../../Athena/Validator/ConstraintValidatorFactoryInterface.html">ConstraintValidatorFactoryInterface</a>
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/ConstraintValidatorInterface" data-name="athena::validator::constraintvalidatorinterface">
+      <a href="../../../Athena/Validator/ConstraintValidatorInterface.html">ConstraintValidatorInterface</a>
+      
+    </li>
+  
+  <li class="parent " data-id="athena-validator/Athena/Validator/Exceptions" data-name="athena::validator::exceptions">
+      <a href="../../../Athena/Validator/Exceptions.html">Exceptions</a>
+      
+        <ul>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Exceptions/UnexpectedValueError" data-name="athena::validator::exceptions::unexpectedvalueerror">
+      <a href="../../../Athena/Validator/Exceptions/UnexpectedValueError.html">UnexpectedValueError</a>
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Exceptions/ValidatorError" data-name="athena::validator::exceptions::validatorerror">
+      <a href="../../../Athena/Validator/Exceptions/ValidatorError.html">ValidatorError</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/ExecutionContext" data-name="athena::validator::executioncontext(root)">
+      <a href="../../../Athena/Validator/ExecutionContext.html">ExecutionContext</a>
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/ExecutionContextInterface" data-name="athena::validator::executioncontextinterface">
+      <a href="../../../Athena/Validator/ExecutionContextInterface.html">ExecutionContextInterface</a>
+      
+    </li>
+  
+  <li class="parent " data-id="athena-validator/Athena/Validator/Metadata" data-name="athena::validator::metadata">
+      <a href="../../../Athena/Validator/Metadata.html">Metadata</a>
+      
+        <ul>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Metadata/CascadingStrategy" data-name="athena::validator::metadata::cascadingstrategy">
+      <a href="../../../Athena/Validator/Metadata/CascadingStrategy.html">CascadingStrategy</a>
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Metadata/ClassMetadata" data-name="athena::validator::metadata::classmetadata(t)">
+      <a href="../../../Athena/Validator/Metadata/ClassMetadata.html">ClassMetadata</a>
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Metadata/GenericMetadata" data-name="athena::validator::metadata::genericmetadata">
+      <a href="../../../Athena/Validator/Metadata/GenericMetadata.html">GenericMetadata</a>
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Metadata/GetterMetadata" data-name="athena::validator::metadata::gettermetadata(entitytype, methodidx)">
+      <a href="../../../Athena/Validator/Metadata/GetterMetadata.html">GetterMetadata</a>
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Metadata/MetadataFactory" data-name="athena::validator::metadata::metadatafactory">
+      <a href="../../../Athena/Validator/Metadata/MetadataFactory.html">MetadataFactory</a>
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Metadata/MetadataFactoryInterface" data-name="athena::validator::metadata::metadatafactoryinterface">
+      <a href="../../../Athena/Validator/Metadata/MetadataFactoryInterface.html">MetadataFactoryInterface</a>
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Metadata/MetadataInterface" data-name="athena::validator::metadata::metadatainterface">
+      <a href="../../../Athena/Validator/Metadata/MetadataInterface.html">MetadataInterface</a>
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Metadata/PropertyMetadata" data-name="athena::validator::metadata::propertymetadata(entitytype, propertyidx)">
+      <a href="../../../Athena/Validator/Metadata/PropertyMetadata.html">PropertyMetadata</a>
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Metadata/PropertyMetadataInterface" data-name="athena::validator::metadata::propertymetadatainterface">
+      <a href="../../../Athena/Validator/Metadata/PropertyMetadataInterface.html">PropertyMetadataInterface</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/PropertyPath" data-name="athena::validator::propertypath">
+      <a href="../../../Athena/Validator/PropertyPath.html">PropertyPath</a>
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/ServiceConstraintValidator" data-name="athena::validator::serviceconstraintvalidator">
+      <a href="../../../Athena/Validator/ServiceConstraintValidator.html">ServiceConstraintValidator</a>
+      
+    </li>
+  
+  <li class="parent " data-id="athena-validator/Athena/Validator/Spec" data-name="athena::validator::spec">
+      <a href="../../../Athena/Validator/Spec.html">Spec</a>
+      
+        <ul>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Spec/ComparisonConstraintValidatorTestCase" data-name="athena::validator::spec::comparisonconstraintvalidatortestcase">
+      <a href="../../../Athena/Validator/Spec/ComparisonConstraintValidatorTestCase.html">ComparisonConstraintValidatorTestCase</a>
+      
+    </li>
+  
+  <li class="parent " data-id="athena-validator/Athena/Validator/Spec/ConstraintValidatorTestCase" data-name="athena::validator::spec::constraintvalidatortestcase">
+      <a href="../../../Athena/Validator/Spec/ConstraintValidatorTestCase.html">ConstraintValidatorTestCase</a>
+      
+        <ul>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Spec/ConstraintValidatorTestCase/Assertion" data-name="athena::validator::spec::constraintvalidatortestcase::assertion">
+      <a href="../../../Athena/Validator/Spec/ConstraintValidatorTestCase/Assertion.html">Assertion</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Spec/EntityGroupSequenceProvider" data-name="athena::validator::spec::entitygroupsequenceprovider">
+      <a href="../../../Athena/Validator/Spec/EntityGroupSequenceProvider.html">EntityGroupSequenceProvider</a>
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Spec/EntitySequenceProvider" data-name="athena::validator::spec::entitysequenceprovider">
+      <a href="../../../Athena/Validator/Spec/EntitySequenceProvider.html">EntitySequenceProvider</a>
+      
+    </li>
+  
+  <li class="parent " data-id="athena-validator/Athena/Validator/Spec/FailingConstraint" data-name="athena::validator::spec::failingconstraint">
+      <a href="../../../Athena/Validator/Spec/FailingConstraint.html">FailingConstraint</a>
+      
+        <ul>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Spec/FailingConstraint/Validator" data-name="athena::validator::spec::failingconstraint::validator">
+      <a href="../../../Athena/Validator/Spec/FailingConstraint/Validator.html">Validator</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Spec/MockContextualValidator" data-name="athena::validator::spec::mockcontextualvalidator">
+      <a href="../../../Athena/Validator/Spec/MockContextualValidator.html">MockContextualValidator</a>
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Spec/MockMetadataFactory" data-name="athena::validator::spec::mockmetadatafactory(t1, t2, t3, t4, t5)">
+      <a href="../../../Athena/Validator/Spec/MockMetadataFactory.html">MockMetadataFactory</a>
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Spec/MockValidator" data-name="athena::validator::spec::mockvalidator">
+      <a href="../../../Athena/Validator/Spec/MockValidator.html">MockValidator</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Validatable" data-name="athena::validator::validatable">
+      <a href="../../../Athena/Validator/Validatable.html">Validatable</a>
+      
+    </li>
+  
+  <li class="parent " data-id="athena-validator/Athena/Validator/Validator" data-name="athena::validator::validator">
+      <a href="../../../Athena/Validator/Validator.html">Validator</a>
+      
+        <ul>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Validator/ContextualValidatorInterface" data-name="athena::validator::validator::contextualvalidatorinterface">
+      <a href="../../../Athena/Validator/Validator/ContextualValidatorInterface.html">ContextualValidatorInterface</a>
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Validator/RecursiveContextualValidator" data-name="athena::validator::validator::recursivecontextualvalidator">
+      <a href="../../../Athena/Validator/Validator/RecursiveContextualValidator.html">RecursiveContextualValidator</a>
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Validator/RecursiveValidator" data-name="athena::validator::validator::recursivevalidator">
+      <a href="../../../Athena/Validator/Validator/RecursiveValidator.html">RecursiveValidator</a>
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Validator/ValidatorInterface" data-name="athena::validator::validator::validatorinterface">
+      <a href="../../../Athena/Validator/Validator/ValidatorInterface.html">ValidatorInterface</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="athena-validator/Athena/Validator/Violation" data-name="athena::validator::violation">
+      <a href="../../../Athena/Validator/Violation.html">Violation</a>
+      
+        <ul>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Violation/ConstraintViolation" data-name="athena::validator::violation::constraintviolation(root)">
+      <a href="../../../Athena/Validator/Violation/ConstraintViolation.html">ConstraintViolation</a>
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Violation/ConstraintViolationBuilder" data-name="athena::validator::violation::constraintviolationbuilder(root)">
+      <a href="../../../Athena/Validator/Violation/ConstraintViolationBuilder.html">ConstraintViolationBuilder</a>
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Violation/ConstraintViolationBuilderInterface" data-name="athena::validator::violation::constraintviolationbuilderinterface">
+      <a href="../../../Athena/Validator/Violation/ConstraintViolationBuilderInterface.html">ConstraintViolationBuilderInterface</a>
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Violation/ConstraintViolationInterface" data-name="athena::validator::violation::constraintviolationinterface">
+      <a href="../../../Athena/Validator/Violation/ConstraintViolationInterface.html">ConstraintViolationInterface</a>
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Violation/ConstraintViolationList" data-name="athena::validator::violation::constraintviolationlist">
+      <a href="../../../Athena/Validator/Violation/ConstraintViolationList.html">ConstraintViolationList</a>
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/Athena/Validator/Violation/ConstraintViolationListInterface" data-name="athena::validator::violation::constraintviolationlistinterface">
+      <a href="../../../Athena/Validator/Violation/ConstraintViolationListInterface.html">ConstraintViolationListInterface</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="athena-validator/AVD" data-name="avd">
+      <a href="../../../AVD.html">AVD</a>
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> Athena::Validator::Constraints::NotBlank
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../../Athena/Validator/Constraints/NotBlank.html">Athena::Validator::Constraints::NotBlank</a></li><li class="superclass"><a href="../../../Athena/Validator/Constraint.html">Athena::Validator::Constraint</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>Validates that a value is not blank; meaning not equal to a blank string, an empty <code>Iterable</code>, <code>false</code>, or optionally <code>nil</code>.</p>
+
+<h2><a id="configuration" class="anchor" href="#configuration">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Configuration</h2>
+
+<h3><a id="optional-arguments" class="anchor" href="#optional-arguments">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Optional Arguments</h3>
+
+<h4><a id="allow-nil" class="anchor" href="#allow-nil">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>allow_nil</h4>
+
+<p><strong>Type:</strong> <code>Bool</code> <strong>Default:</strong> <code>false</code></p>
+
+<p>If set to <code>true</code>, <code>nil</code> values are considered valid and will not trigger a violation.</p>
+
+<h4><a id="message" class="anchor" href="#message">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>message</h4>
+
+<p><strong>Type:</strong> <code>String</code> <strong>Default:</strong> <code>This value should not be blank.</code></p>
+
+<p>The message that will be shown if the value is blank.</p>
+
+<h5><a id="placeholders" class="anchor" href="#placeholders">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Placeholders</h5>
+
+<p>The following placeholders can be used in this message:</p>
+
+<ul><li><code>{{ value }}</code> - The current (invalid) value.</li></ul>
+
+<h4><a id="groups" class="anchor" href="#groups">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>groups</h4>
+
+<p><strong>Type:</strong> <code>Array(String) | String | Nil</code> <strong>Default:</strong> <code>nil</code></p>
+
+<p>The <a href="https://athena-framework.github.io/validator/Athena/Validator/Constraint.html#validation-groups" target="_blank">validation groups</a> this constraint belongs to.
+<code><a href="../../../Athena/Validator/Constraint.html#DEFAULT_GROUP">AVD::Constraint::DEFAULT_GROUP</a></code> is assumed if <code>nil</code>.</p>
+
+<h4><a id="payload" class="anchor" href="#payload">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>payload</h4>
+
+<p><strong>Type:</strong> <code>Hash(String, String)?</code> <strong>Default:</strong> <code>nil</code></p>
+
+<p>Any arbitrary domain-specific data that should be stored with this constraint.
+The <a href="https://athena-framework.github.io/validator/Athena/Validator/Constraint.html#payload" target="_blank">payload</a> is not used by <code><a href="../../../Athena/Validator.html">Athena::Validator</a></code>, but its processing is completely up to you.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/athena-framework/validator/blob/f63e700e77ee3e7f198c2d34197b4e1f29fd69e4/src/constraints/not_blank.cr#L38" target="_blank">
+        constraints/not_blank.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+  
+    <h2>
+      <a id="constant-summary" class="anchor" href="#constant-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+      Constant Summary
+    </h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="IS_BLANK_ERROR">
+        <strong>IS_BLANK_ERROR</strong> = <code><span class="s">&quot;0d0c3254-3642-4cb0-9882-46ee5918e6e3&quot;</span></code>
+      </dt>
+      
+    
+  </dl>
+
+
+
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new(allow_nil:Bool=false,message:String=&quot;Thisvalueshouldnotbeblank.&quot;,groups:Array(String)%7CString%7CNil=nil,payload:Hash(String,String)?=nil)-class-method" class="signature"><strong>.new</strong>(allow_nil : Bool = <span class="n">false</span>, message : String = <span class="s">&quot;This value should not be blank.&quot;</span>, groups : Array(String) | String | Nil = <span class="n">nil</span>, payload : Hash(String, String)? = <span class="n">nil</span>)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#allow_nil?:Bool-instance-method" class="signature"><strong>#allow_nil?</strong> : Bool</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#validated_by:AVD::ConstraintValidator.class-instance-method" class="signature"><strong>#validated_by</strong> : <span class="t">AVD</span><span class="t">::</span><span class="t">ConstraintValidator</span>.<span class="k">class</span></a>
+        
+          <div class="summary"><p>Returns the <code>AVD::ConstraintValidator.class</code> that should handle validating <code>self</code>.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+  <h3>Instance methods inherited from class <code><a href="../../../Athena/Validator/Constraint.html">Athena::Validator::Constraint</a></code></h3>
+  
+  
+    <a href="../../../Athena/Validator/Constraint.html#add_implicit_group(group:String):Nil-instance-method" class="tooltip">
+      <span>add_implicit_group(group : String) : Nil</span>
+    add_implicit_group</a>, 
+    
+  
+    <a href="../../../Athena/Validator/Constraint.html#groups:Array(String)-instance-method" class="tooltip">
+      <span>groups : Array(String)</span>
+    groups</a>, 
+    
+  
+    <a href="../../../Athena/Validator/Constraint.html#groups=(groups:Array(String))-instance-method" class="tooltip">
+      <span>groups=(groups : Array(String))</span>
+    groups=</a>, 
+    
+  
+    <a href="../../../Athena/Validator/Constraint.html#message:String-instance-method" class="tooltip">
+      <span>message : String</span>
+    message</a>, 
+    
+  
+    <a href="../../../Athena/Validator/Constraint.html#payload:Hash(String,String)?-instance-method" class="tooltip">
+      <span>payload : Hash(String, String)?</span>
+    payload</a>, 
+    
+  
+    <a href="../../../Athena/Validator/Constraint.html#validated_by:AVD::ConstraintValidator.class-instance-method" class="tooltip">
+      <span>validated_by : <span class="t">AVD</span><span class="t">::</span><span class="t">ConstraintValidator</span>.<span class="k">class</span></span>
+    validated_by</a>
+    
+  
+
+
+    
+
+  <h3>Constructor methods inherited from class <code><a href="../../../Athena/Validator/Constraint.html">Athena::Validator::Constraint</a></code></h3>
+  
+  
+    <a href="../../../Athena/Validator/Constraint.html#new(message:String,groups:Array(String)%7CString%7CNil=nil,payload:Hash(String,String)?=nil)-class-method" class="tooltip">
+      <span>new(message : String, groups : Array(String) | String | Nil = <span class="n">nil</span>, payload : Hash(String, String)? = <span class="n">nil</span>)</span>
+    new</a>
+    
+  
+
+
+    
+
+  <h3>Class methods inherited from class <code><a href="../../../Athena/Validator/Constraint.html">Athena::Validator::Constraint</a></code></h3>
+  
+  
+    <a href="../../../Athena/Validator/Constraint.html#error_name(error_code:String):String-class-method" class="tooltip">
+      <span>error_name(error_code : String) : String</span>
+    error_name</a>
+    
+  
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
+  
+    <div class="entry-detail" id="new(allow_nil:Bool=false,message:String=&quot;Thisvalueshouldnotbeblank.&quot;,groups:Array(String)|String|Nil=nil,payload:Hash(String,String)?=nil)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(allow_nil : Bool = <span class="n">false</span>, message : String = <span class="s">&quot;This value should not be blank.&quot;</span>, groups : Array(String) | String | Nil = <span class="n">nil</span>, payload : Hash(String, String)? = <span class="n">nil</span>)
+
+        <a class="method-permalink" href="#new(allow_nil:Bool=false,message:String=&quot;Thisvalueshouldnotbeblank.&quot;,groups:Array(String)%7CString%7CNil=nil,payload:Hash(String,String)?=nil)-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/athena-framework/validator/blob/f63e700e77ee3e7f198c2d34197b4e1f29fd69e4/src/constraints/not_blank.cr#L47" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="allow_nil?:Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>allow_nil?</strong> : Bool
+
+        <a class="method-permalink" href="#allow_nil?:Bool-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/athena-framework/validator/blob/f63e700e77ee3e7f198c2d34197b4e1f29fd69e4/src/constraints/not_blank.cr#L45" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="validated_by:AVD::ConstraintValidator.class-instance-method">
+      <div class="signature">
+        
+        def <strong>validated_by</strong> : <span class="t">AVD</span><span class="t">::</span><span class="t">ConstraintValidator</span>.<span class="k">class</span>
+
+        <a class="method-permalink" href="#validated_by:AVD::ConstraintValidator.class-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns the <code>AVD::ConstraintValidator.class</code> that should handle validating <code>self</code>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/athena-framework/validator/blob/f63e700e77ee3e7f198c2d34197b4e1f29fd69e4/src/constraints/not_blank.cr#L38" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>
